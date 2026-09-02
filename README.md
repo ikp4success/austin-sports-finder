@@ -118,3 +118,7 @@ Pre-commit hooks (installed by `make setup`) run the same checks automatically b
 - Cross-reference Buildings to flag indoor vs. outdoor facilities explicitly
 - A "report an issue" affordance, since Overture data will sometimes just be wrong. Better to give users a way to flag it than to imply it's authoritative.
 - Deduplicate near-identical Places results. The same park can show up several times under slightly different names in crowd-sourced data.
+
+**Author**
+
+* [***Immanuel George***](https://www.linkedin.com/in/imgeorgeresume/)
