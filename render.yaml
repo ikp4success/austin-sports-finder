@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: austin-sports-finder
+    name: austin-sports-finder-dev-c6adfb2b
     runtime: python
     plan: free
     buildCommand: pip install -r requirements.txt
