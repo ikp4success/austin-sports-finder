@@ -13,11 +13,11 @@ services:
       # keyword matching. sync: false keeps the values out of this
       # committed file.
       - key: GEMINI_API_KEY
-        sync: false
+        sync: true
       - key: GROQ_API_KEY
-        sync: false
+        sync: true
       - key: MISTRAL_API_KEY
-        sync: false
+        sync: true
       - key: ANTHROPIC_API_KEY
         sync: false
       - key: OPENAI_API_KEY
