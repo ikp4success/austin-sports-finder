@@ -1,0 +1,10 @@
+Flask==3.0.3
+gunicorn==22.0.0
+python-dotenv==1.2.3
+
+# For the natural-language search bar (see llm_providers.py). Only the SDK
+# matching whichever *_API_KEY env var is set gets imported at runtime, but
+# all three are installed so the search works out of the box with any of them.
+anthropic==1.3.0
+openai==3.7.0
+google-genai==2.21.0

@@ -1,0 +1,123 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-97.7714, 30.2669] },
+      "properties": {
+        "source": "place",
+        "name": "Zilker Park Disc Golf Course",
+        "category": "disc_golf",
+        "address": "2100 Barton Springs Rd, Austin, TX",
+        "phone": null,
+        "website": null,
+        "details_limited": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-97.7544, 30.2802] },
+      "properties": {
+        "source": "place",
+        "name": "Rosewood Park Basketball Courts",
+        "category": "basketball_court",
+        "address": "2300 Rosewood Ave, Austin, TX",
+        "phone": null,
+        "website": null,
+        "details_limited": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-97.7595, 30.2489] },
+      "properties": {
+        "source": "place",
+        "name": "Auditorium Shores Dog Park",
+        "category": "dog_park",
+        "address": "800 W Riverside Dr, Austin, TX",
+        "phone": null,
+        "website": null,
+        "details_limited": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-97.7295, 30.2951] },
+      "properties": {
+        "source": "place",
+        "name": "Eastwoods Park Tennis Courts",
+        "category": "tennis_court",
+        "address": null,
+        "phone": null,
+        "website": null,
+        "details_limited": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-97.7469, 30.2711] },
+      "properties": {
+        "source": "place",
+        "name": "Palm Park Soccer Field",
+        "category": "soccer_field",
+        "address": "601 E 5th St, Austin, TX",
+        "phone": null,
+        "website": null,
+        "details_limited": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-97.7635, 30.3072] },
+      "properties": {
+        "source": "place",
+        "name": "Ramsey Skate Park",
+        "category": "skate_park",
+        "address": "4301 Rosedale Ave, Austin, TX",
+        "phone": null,
+        "website": null,
+        "details_limited": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-97.7735, 30.2635], [-97.7680, 30.2635],
+          [-97.7680, 30.2695], [-97.7735, 30.2695],
+          [-97.7735, 30.2635]
+        ]]
+      },
+      "properties": {
+        "source": "land_use",
+        "name": "Zilker Metropolitan Park",
+        "category": "park",
+        "address": null,
+        "phone": null,
+        "website": null,
+        "details_limited": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-97.7220, 30.2760], [-97.7180, 30.2760],
+          [-97.7180, 30.2800], [-97.7220, 30.2800],
+          [-97.7220, 30.2760]
+        ]]
+      },
+      "properties": {
+        "source": "land_use",
+        "name": "Unnamed green space",
+        "category": "recreation_area",
+        "address": null,
+        "phone": null,
+        "website": null,
+        "details_limited": true
+      }
+    }
+  ]
+}
