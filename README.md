@@ -9,7 +9,7 @@
 
 **About**
 
-A map that answers "where do people actually go to play basketball, throw a frisbee, or walk a dog around here." Built on Overture Maps data for anyone new to Austin who doesn't yet have that local knowledge, with a natural-language search bar that an LLM (Gemini, Groq, Mistral, Anthropic, or OpenAI, whichever the server has a key for) turns into map filters.
+A map of free places to play in central Austin: basketball courts, dog parks, disc golf, pickleball, trails, and more, built on Overture Maps data. Commercial-venue apps like Yelp and Google are built around businesses, so this kind of public infrastructure is usually missing, buried, or miscategorized on them. Comes with a natural-language search bar, an LLM (Gemini, Groq, Mistral, Anthropic, or OpenAI, whichever the server has a key for) turns a plain-English query into the same map filters.
 
 **Screenshots**
 
@@ -21,34 +21,12 @@ Natural-language search, parsed by AI into the same category/location filters us
 
 ![Search for "somewhere quiet to play basketball near downtown", showing it understood as Basketball near downtown within 2 miles](docs/screenshots/search-ai.png)
 
-## Why this idea
-
-Commercial-venue apps (Yelp, Google) are built around businesses, so free public infrastructure (a park's basketball hoops, an unnamed green space with a soccer pitch, a neighborhood dog park) is often missing, buried, or miscategorized. That's exactly the kind of data Overture actually has (Places and the Land Use/Base theme), and exactly the gap a newcomer to a city feels most: not "what restaurant should I try," but "is there anywhere nearby I can just go play."
-
-I picked Austin because I know it well enough to sanity-check whether the output actually looks right. A park that's missing, or a court mislabeled as something else, is obvious to me here in a way it wouldn't be in a city I don't know.
-
 ## What it does
 
 - A single map of central Austin, filterable by activity (basketball, tennis, soccer/fields, dog parks, skate parks, disc golf, pickleball, trails, swimming, playgrounds, general parks, and a few more)
 - "Use my location" for a real near-me radius search, not just a static city-wide view
 - A natural-language search bar ("somewhere quiet to play basketball near downtown") parsed by an LLM into the same category/location filters, see [Settings](#settings) below
 - A map/list toggle, so results can be browsed as cards instead of pins
-- Every result shows what Overture actually knows about that spot. When the data is thin (no address, no phone, just a shape with a name or no name at all), the UI says so explicitly instead of hiding the result or pretending the field exists
-
-## The key trade-off, and why it's the interesting part
-
-Overture's sport/rec data is genuinely uneven: some courts and fields exist as clean `place` points with a name and category, while a lot of others only exist as an unlabeled `land_use` polygon (a shape tagged "recreation" or "park" with no name, no attributes). A version of this app that only used clean Places data would look nicer in a demo but would silently miss a large share of real, usable spots, including some of the most obvious ones in Austin.
-
-I chose to surface both, Places and Land Use polygons, and to be honest in the UI when a result is thin ("Limited details available for this spot") rather than dropping it or faking detail it doesn't have. That felt like the more honest product decision, even though it means some pins on the map have almost no information behind them.
-
-The same judgment call showed up again with pickleball: Overture has no dedicated category for it at all, real pickleball venues turn up with no category or a vague generic one. Rather than let the search bar silently shrug at "pickleball," the extraction script now catches those by name and re-tags them, while still excluding the pickleball gear store that would otherwise slip in under the same name.
-
-## What I deliberately cut
-
-- **One city, one small bounding box** (central Austin), not a multi-city or nationwide tool. Keeps the extracted file small and lets me actually verify the data is right.
-- **No live status.** No "open now," no real-time crowding. Overture is a static snapshot, and I didn't want to fake liveness the data can't back up.
-- **No accounts, no saved favorites, no reviews.** This is a discovery tool, not a social app.
-- **Polygon "center" for radius search is a bounding-box midpoint,** not a true geometric centroid or nearest-edge distance. Accurate enough for "is this roughly nearby," not for precise routing.
 
 ## How it's built
 

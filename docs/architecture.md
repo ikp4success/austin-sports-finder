@@ -1,6 +1,6 @@
 # Architecture
 
-Two separate flows: a one-time offline data pipeline that produces the file the app ships, and the live request flow that serves it. Both are small on purpose, see the README's "What I deliberately cut" for why.
+Two separate flows: a one-time offline data pipeline that produces the file the app ships, and the live request flow that serves it. Both are small on purpose, see the README's "How it's built" section for the scope this is built around.
 
 ## Data pipeline (offline, one-time)
 
